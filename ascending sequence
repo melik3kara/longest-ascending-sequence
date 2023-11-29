@@ -1,0 +1,34 @@
+public static void main(String[] args) {
+        int counter = 0;
+        int longCounter = 0, sum = 0;
+        
+        int longSum = 0;
+        int prevNumber = -1;
+        Scanner inp = new Scanner (System.in);
+        System.out.print(" enter sequence: ");
+        int number = inp.nextInt();
+        while(number  > 0)
+        {
+            if(number > prevNumber)
+            {
+                sum += number;
+                prevNumber = number;
+                counter ++;
+            }
+            else
+            {
+                prevNumber = number;
+                counter = 1;
+                sum = number;
+            }
+            number = inp.nextInt();
+            if(counter>longCounter)
+                {
+                    longCounter = counter;
+                    longSum = sum;
+                }
+        }
+        System.out.print(longCounter + " " + longSum + " ");
+        inp.close();
+    }
+}
