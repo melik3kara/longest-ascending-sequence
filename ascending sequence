@@ -28,7 +28,7 @@ public static void main(String[] args) {
                     longSum = sum;
                 }
         }
-        System.out.print(longCounter + " " + longSum + " ");
+        System.out.print("length of the sequence: " + longCounter + " " + " \nsum of the numbers in the longest sequence: " + longSum );
         inp.close();
     }
 }
